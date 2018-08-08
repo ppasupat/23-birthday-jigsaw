@@ -1,0 +1,78 @@
+html {
+  height: 100%;
+  font-family: sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: black; 
+}
+
+#frame {
+  width: 452px;
+  height: 512px;
+  background: url('bg.png');
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+.piece, .placed {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background: url('sprite.png');
+}
+
+.piece {
+  cursor: move;
+  border: 3px solid #999;
+  z-index: 1;
+}
+
+.piece.flashing {
+  background: yellow;
+}
+
+.placed {
+  z-index: 0;
+}
+
+.banner {
+  background-color: #eef;
+  width: 452px;
+  height: 512px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+.song-stopped .placed {
+  cursor: pointer;
+}
+
+.song-playing .placed.current {
+  opacity: 0.5;
+}
+
+.placed.faded {
+  opacity: 0.3;
+}
+
+#message, #message2, #message3 {
+  color: #BBB;
+  margin: 10px;
+  text-align: center;
+}
+#message3 {
+  font-size: 60%;
+}
